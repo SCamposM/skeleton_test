@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "53ebd79b1c0315c0d005ffb717a60ce1",
+    "content-hash": "0efa3824f6c1133a77487df17d38b97b",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -2738,6 +2738,66 @@
             "time": "2017-09-22T20:46:04+00:00"
         },
         {
+            "name": "scamposm/skeleton",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../skeleton",
+                "reference": "b651776922ad102363ba03f53e8037127ad9b837",
+                "shasum": null
+            },
+            "require": {
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=5.4.3",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Scamposm\\Skeleton\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Scamposm\\Skeleton\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "check-style": [
+                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ],
+                "fix-style": [
+                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Campos Mata",
+                    "email": "scamposm96@gmail.com",
+                    "homepage": "https://github.com/SCamposM",
+                    "role": "Developer"
+                }
+            ],
+            "homepage": "https://github.com/scamposm/skeleton",
+            "keywords": [
+                "scamposm",
+                "skeleton"
+            ]
+        },
+        {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",
             "source": {
@@ -4623,7 +4683,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "scamposm/skeleton": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
